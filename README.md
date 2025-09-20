@@ -1,6 +1,6 @@
 # Real Audio - BrowserGym Agent
 
-A demonstration agent using OpenAI API to perform automated web browser tasks through the BrowserGym framework.
+A demonstration agent using OpenAI API to perform automated web browser tasks through the AGI SDK framework.
 
 ## Prerequisites
 
