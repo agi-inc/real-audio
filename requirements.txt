@@ -1,0 +1,5 @@
+agisdk
+playwright
+numpy
+openai
+Pillow
