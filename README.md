@@ -1,4 +1,4 @@
-# Real Audio - BrowserGym Agent
+# Real Audio - AGI SDK Agent
 
 A demonstration agent using voice to perform automated web actions using the AGI SDK framework.
 
