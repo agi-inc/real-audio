@@ -37,6 +37,7 @@ class DemoAgent(Agent):
     """A basic agent using OpenAI API, to demonstrate BrowserGym's functionalities."""
 
     def obs_preprocessor(self, obs: dict) -> dict:
+        import code; code.interact(local=locals())
         return {
             "chat_messages": obs["chat_messages"],
             "screenshot": obs["screenshot"],
