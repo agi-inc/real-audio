@@ -10,24 +10,33 @@ A demonstration agent using voice to perform automated web actions using the AGI
 ## Installation
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/agi-inc/real-audio
    cd real-audio
    ```
 
 2. **Install the required dependencies:**
+
    ```bash
    pip install -r requirements.txt
    ```
 
 3. **Set up your API key:**
+
    ```bash
    export OPENAI_API_KEY="your-api-key"   # any supported provider key works
+   ```
+
+4. **Set up playwright:**
+   ```python
+   playwright install chromium --force
    ```
 
 ## Usage
 
 Run the agent with default settings:
+
 ```bash
 python run_agent.py
 ```
@@ -59,8 +68,9 @@ python run_agent.py --leaderboard true --run_id my-run-001
 ## Available Tasks
 
 The project includes audio tasks for various web applications:
+
 - **dashdish**: Restaurant/food delivery platform tasks
-- **fly-unified**: Flight booking platform tasks  
+- **fly-unified**: Flight booking platform tasks
 - **gocalendar**: Calendar application tasks
 - **gomail**: Email application tasks
 - **networkin**: Professional networking platform tasks
