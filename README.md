@@ -4,7 +4,7 @@ A demonstration agent using voice to perform automated web actions using the AGI
 
 ## Prerequisites
 
-- Python 3.8 or higher
+- Python 3.11 or higher
 - OpenAI API key (or compatible provider)
 
 ## Installation
