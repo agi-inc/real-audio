@@ -55,9 +55,6 @@ python run_agent.py --task webclones.dashdish-1
 
 # Run in headless mode
 python run_agent.py --headless true
-
-# Run with different model
-python run_agent.py --model gpt-4-turbo
 ```
 
 ## Available Tasks
@@ -78,11 +75,10 @@ The project includes audio tasks for various web applications:
 
 ## Troubleshooting
 
-Agent logs are stored in
+Agent logs are stored in the /results directory. If your agent crashes, it will be logged there, so look there first.
 
 1. **API Key Issues**: Ensure your OPENAI_API_KEY is properly set and has sufficient credits
 2. **Dependencies**: Make sure all requirements are installed with `pip install -r requirements.txt`
-3. **Browser Issues**: If running in GUI mode, ensure you have a display available
 
 ## Dependencies
 
