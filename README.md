@@ -1,6 +1,6 @@
 # Real Audio - BrowserGym Agent
 
-A demonstration agent using OpenAI API to perform automated web browser tasks through the AGI SDK framework.
+A demonstration agent using voice to perform automated web actions using the AGI SDK framework.
 
 ## Prerequisites
 
@@ -93,7 +93,7 @@ real-audio/
 
 ## Dependencies
 
-- `agisdk`: BrowserGym framework
+- `agisdk`: AGI SDK framework
 - `playwright`: Browser automation
 - `numpy`: Numerical computing
 - `openai`: OpenAI API client
