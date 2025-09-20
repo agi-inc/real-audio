@@ -37,7 +37,6 @@ class DemoAgent(Agent):
     """A basic agent using OpenAI API, to demonstrate BrowserGym's functionalities."""
 
     def obs_preprocessor(self, obs: dict) -> dict:
-        import code; code.interact(local=locals())
         return {
             "chat_messages": obs["chat_messages"],
             "screenshot": obs["screenshot"],
@@ -46,6 +45,7 @@ class DemoAgent(Agent):
             "last_action_error": obs["last_action_error"],
             "axtree_txt": flatten_axtree_to_str(obs["axtree_object"]),
             "pruned_html": prune_html(flatten_dom_to_str(obs["dom_object"])),
+            "mp3_path": f"audio_tasks/{obs["task_id"]}.mp3"
         }
 
     def __init__(
@@ -304,18 +304,11 @@ if __name__ == "__main__":
     parser.add_argument("--task", type=str, default="webclones.omnizon-1",
                         help="Task to run (default: webclones.omnizon-1)")
     parser.add_argument("--headless", type=str2bool, default=False,
-                        help="Run headless (default: False)")
-    parser.add_argument("--run_id", type=str, default=None,
-                        help="Run ID for leaderboard submission (required for leaderboard)")
-    parser.add_argument("--leaderboard", type=str2bool, default=False,
-                        help="Submit results to leaderboard (default: False)")
-    
+                        help="Run headless (default: False)")    
     args = parser.parse_args()
     
     results = run_demo_agent(
         model_name=args.model, 
         task_name=args.task, 
         headless=args.headless,
-        leaderboard=args.leaderboard,
-        run_id=args.run_id
     )
