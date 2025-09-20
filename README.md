@@ -46,8 +46,6 @@ python run_agent.py
 - `--model`: Model to use (default: gpt-4o)
 - `--task`: Task to run (default: webclones.omnizon-1)
 - `--headless`: Run in headless mode (default: False)
-- `--leaderboard`: Submit results to leaderboard (default: False)
-- `--run_id`: Run ID for leaderboard submission
 
 ### Examples
 
@@ -60,9 +58,6 @@ python run_agent.py --headless true
 
 # Run with different model
 python run_agent.py --model gpt-4-turbo
-
-# Submit to leaderboard
-python run_agent.py --leaderboard true --run_id my-run-001
 ```
 
 ## Available Tasks
@@ -81,21 +76,9 @@ The project includes audio tasks for various web applications:
 - **udriver**: Ride-sharing platform tasks
 - **zilloft**: Real estate platform tasks
 
-## Project Structure
-
-```
-real-audio/
-├── audio_tasks/          # Task definitions with audio files
-│   ├── dashdish/        # Restaurant platform tasks
-│   ├── fly-unified/     # Flight booking tasks
-│   ├── gocalendar/      # Calendar tasks
-│   └── ...              # Other platform tasks
-├── run_agent.py         # Main agent runner
-├── requirements.txt     # Python dependencies
-└── README.md           # This file
-```
-
 ## Troubleshooting
+
+Agent logs are stored in
 
 1. **API Key Issues**: Ensure your OPENAI_API_KEY is properly set and has sufficient credits
 2. **Dependencies**: Make sure all requirements are installed with `pip install -r requirements.txt`
