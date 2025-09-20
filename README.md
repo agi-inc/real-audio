@@ -1,1 +1,100 @@
-# real-audio
+# Real Audio - BrowserGym Agent
+
+A demonstration agent using OpenAI API to perform automated web browser tasks through the BrowserGym framework.
+
+## Prerequisites
+
+- Python 3.8 or higher
+- OpenAI API key (or compatible provider)
+
+## Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/agi-inc/real-audio
+   cd real-audio
+   ```
+
+2. **Install the required dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Set up your API key:**
+   ```bash
+   export OPENAI_API_KEY="your-api-key"   # any supported provider key works
+   ```
+
+## Usage
+
+Run the agent with default settings:
+```bash
+python run_agent.py
+```
+
+### Command Line Options
+
+- `--model`: Model to use (default: gpt-4o)
+- `--task`: Task to run (default: webclones.omnizon-1)
+- `--headless`: Run in headless mode (default: False)
+- `--leaderboard`: Submit results to leaderboard (default: False)
+- `--run_id`: Run ID for leaderboard submission
+
+### Examples
+
+```bash
+# Run with a specific task
+python run_agent.py --task webclones.dashdish-1
+
+# Run in headless mode
+python run_agent.py --headless true
+
+# Run with different model
+python run_agent.py --model gpt-4-turbo
+
+# Submit to leaderboard
+python run_agent.py --leaderboard true --run_id my-run-001
+```
+
+## Available Tasks
+
+The project includes audio tasks for various web applications:
+- **dashdish**: Restaurant/food delivery platform tasks
+- **fly-unified**: Flight booking platform tasks  
+- **gocalendar**: Calendar application tasks
+- **gomail**: Email application tasks
+- **networkin**: Professional networking platform tasks
+- **omnizon**: E-commerce platform tasks
+- **opendining**: Restaurant reservation platform tasks
+- **staynb**: Accommodation booking platform tasks
+- **topwork**: Job platform tasks
+- **udriver**: Ride-sharing platform tasks
+- **zilloft**: Real estate platform tasks
+
+## Project Structure
+
+```
+real-audio/
+├── audio_tasks/          # Task definitions with audio files
+│   ├── dashdish/        # Restaurant platform tasks
+│   ├── fly-unified/     # Flight booking tasks
+│   ├── gocalendar/      # Calendar tasks
+│   └── ...              # Other platform tasks
+├── run_agent.py         # Main agent runner
+├── requirements.txt     # Python dependencies
+└── README.md           # This file
+```
+
+## Troubleshooting
+
+1. **API Key Issues**: Ensure your OPENAI_API_KEY is properly set and has sufficient credits
+2. **Dependencies**: Make sure all requirements are installed with `pip install -r requirements.txt`
+3. **Browser Issues**: If running in GUI mode, ensure you have a display available
+
+## Dependencies
+
+- `agisdk`: BrowserGym framework
+- `playwright`: Browser automation
+- `numpy`: Numerical computing
+- `openai`: OpenAI API client
+- `Pillow`: Image processing
