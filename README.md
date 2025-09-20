@@ -1,6 +1,8 @@
 # Real Audio - AGI SDK Agent
 
-A demonstration agent using voice to perform automated web actions using the AGI SDK framework.
+A demonstration agent using voice to perform automated web actions using the [AGI SDK](https://github.com/agi-inc/agisdk) framework.
+
+This uses [REAL Evals](https://realevals.xyz) to evaluate your agent and give you a score and win #1 on the REAL leaderboard for a $1000 prize. 
 
 ## Prerequisites
 
